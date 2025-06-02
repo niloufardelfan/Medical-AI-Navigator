@@ -18,6 +18,12 @@ A curated collection of publicly available medical datasets across various modal
 *   [Microscopic Imaging (Histopathology)](#microscopic-imaging-histopathology)
 *   [Imaging and Text](#imaging-and-text)
 *   [Text](#text)
+*   [Other Medical Awesome Collection Projects](#other-medical-awesome-collection-projects)
+*   [Dataset Platforms](#dataset-platforms)
+*   [Evaluation Benchmarks](#evaluation-benchmarks)
+*   [SOTA Methods](#sota-methods)
+    *   [Segmentation](#segmentation)
+*   [Related Foundation Toolbox Projects](#related-foundation-toolbox-projects)
 *   [Contributing](#contributing)
 *   [License](#license)
 
@@ -30,7 +36,7 @@ A curated collection of publicly available medical datasets across various modal
 | CT-ORG              | Organ Segmentation        | CT         | 140        | 6 (lungs, liver, kidneys, spleen, bladder, bones)    | 3D CT scans with annotations for six organ categories.                                                         | [GitHub](https://github.com/MIC-DKFZ/CT-ORG) |
 | AutoPET             | Tumor Segmentation        | PET-CT     | 1,214      | 1 (tumor)                                            | Whole-body tumor segmentation in PET-CT images from FDG-PET/CT scans.                                        | [Grand Challenge](https://autopet.grand-challenge.org/) |
 | TotalSegmentator    | Organ Segmentation        | CT         | 1,204      | 104 (various organs & anatomical structures)       | Comprehensive organ segmentation dataset with 104 classes.                                                     | [GitHub](https://github.com/wasserth/TotalSegmentator) |
-| TotalSegmentator V2 | Organ Segmentation        | CT         | 1,823      | 117 (various organs & anatomical structures)       | Updated version with additional organ classes and more subjects.                                               | [Zenodo](https://zenodo.org/record/81 टोटलSegmentatorV2) |
+| TotalSegmentator V2 | Organ Segmentation        | CT         | 1,823      | 117 (various organs & anatomical structures)       | Updated version with additional organ classes and more subjects.                                               | [Zenodo](https://zenodo.org/record/81 totalsegmentatorv2) |
 | TotalSegmentator MRI| Organ Segmentation        | MRI        | 298        | 56 (various organs & anatomical structures)        | MRI-based organ segmentation dataset.                                                                          | [Zenodo](https://zenodo.org/record/10005224) |
 | ULS                 | Tumor Segmentation        | CT         | 38,842     | 1 (cancer)                                           | Large-scale whole-body tumor segmentation dataset from Universal Lesion Segmentation challenge.                | [Grand Challenge](https://uls.grand-challenge.org/) |
 | AMOS 2022           | Abdominal Organ Segmentation | CT & MRI   | 600        | 15 (spleen, R/L kidney, gallbladder, esophagus, liver, stomach, aorta, IVC, pancreas, R/L adrenal gland, duodenum, bladder, prostate/uterus) | Abdominal Multi-Organ Segmentation challenge, CT and MRI data.                                                | [Grand Challenge](https://amos22.grand-challenge.org/) |
@@ -132,7 +138,7 @@ A curated collection of publicly available medical datasets across various modal
 | STARE           | Vessel Segmentation, Pathology Detection    | Fundus      | 20 (images)       | Vessel/Non-vessel, Pathologies             | STructured Analysis of the REtina. Fundus images with vessel segmentations and clinical labels.           | [STARE Project](http://www.ces.clemson.edu/~ahoover/stare/)           |
 | Messidor        | Diabetic Retinopathy Grading                | Fundus      | 1200 (images)     | Retinopathy grade (0-3), Risk of macular edema | Fundus images for diabetic retinopathy grading.                                                              | [Messidor Page](https://www.adcis.net/en/third-party/messidor/)     |
 | IDRiD           | DR Grading, Lesion Segmentation             | Fundus      | 516 (images)      | DR grades, Lesions (MA, HE, EX, SE)        | Indian Diabetic Retinopathy Image Dataset. Offers DR grading and segmentation of microaneurysms, hemorrhages, etc. | [IDRiD Challenge](https://idrid.grand-challenge.org/Data/)            |
-| OCTA-500        | OCT Angiography Vessel Segmentation         | OCT-A       | 500 (volumes)     | Superficial, Deep, Choriocapillaris Layers | Optical Coherence Tomography Angiography for retinal vessel segmentation in different layers.               | [OCTA-500](http://www.medimaging閁net/octa-500/)                   |
+| OCTA-500        | OCT Angiography Vessel Segmentation         | OCT-A       | 500 (volumes)     | Superficial, Deep, Choriocapillaris Layers | Optical Coherence Tomography Angiography for retinal vessel segmentation in different layers.               | [OCTA-500](http://www.medimagingक़net/octa-500/)                   |
 
 ---
 
@@ -183,6 +189,96 @@ A curated collection of publicly available medical datasets across various modal
 | emrQA           | Question Answering on EHR Notes            | Text     | ~400k (QA pairs)    | Answers from EHR text                | Question answering dataset focused on querying de-identified electronic health record notes.             | [emrQA GitHub](https://github.com/panushri/emrQA)                      |
 | NCBI Disease    | Disease Name Recognition & Normalization   | Text     | 793 (abstracts)     | Disease mentions, Concept IDs        | Corpus of PubMed abstracts annotated for disease names and normalized to MeSH vocabulary.                   | [NCBI Disease Corpus](https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE/) |
 | ClinicalTrials.gov| Various NLP tasks (summarization, IE)      | Text     | Millions (studies)  | Various fields per study             | Database of clinical studies. Can be used for information extraction, summarization, cohort selection.    | [ClinicalTrials.gov](https://clinicaltrials.gov/api/)                 |
+
+---
+
+## 🔗 Other Medical Awesome Collection Projects
+
+*   [SegLossOdyssey](https://github.com/SegLossOdyssey/SegLossOdyssey): A collection of loss functions for medical image segmentation.
+*   [SOTA-MedSeg](https://github.com/SOTA-MedSeg/SOTA-MedSeg): SOTA medical image segmentation methods based on various challenges.
+*   [awesome-transformers-in-medical-imaging](https://github.com/freyja719/awesome-transformers-in-medical-imaging): A collection of resources on applications of Transformers in Medical Imaging.
+*   [awesome-gan-for-medical-imaging](https://github.com/xiehongen/awesome-gan-for-medical-imaging): Awesome GAN for Medical Imaging.
+*   [Awesome-Diffusion-Models-in-Medical-Imaging](https://github.com/amirhossein-kz/Awesome-Diffusion-Models-in-Medical-Imaging): Diffusion Models in Medical Imaging (Published in Medical Image Analysis Journal).
+*   [Awesome-CLIP-in-Medical-Imaging](https://github.com/UsmanAnwar-byte/Awesome-CLIP-in-Medical-Imaging): A Survey on CLIP in Medical Imaging.
+*   [awesome-multimodal-in-medical-imaging](https://github.com/InterestMat/awesome-multimodal-in-medical-imaging): A collection of resources on applications of multi-modal learning in medical imaging.
+*   [awesome-medical-vision-language-models](https://github.com/CV_NLP_ALLSTAR/awesome-medical-vision-language-models): A collection of resources on Medical Vision-Language Models.
+*   [Awesome-Medical-Large-Language-Models](https://github.com/ferris18/Awesome-Medical-Large-Language-Models): Curated papers on Large Language Models in Healthcare and Medical domain.
+*   [awesome-healthcare](https://github.com/kakoni/awesome-healthcare): Curated list of awesome open source healthcare software, libraries, tools and resources.
+*   [awesome_Chinese_medical_NLP](https://github.com/GanjinZero/awesome_Chinese_medical_NLP): 中文医学NLP公开资源整理：术语集/语料库/词向量/预训练模型/知识图谱/命名实体识别/QA/信息抽取/模型/论文/etc.
+*   [Data-Centric-FM-Healthcare](https://github.com/NamrataBonde/Data-Centric-FM-Healthcare): A survey on data-centric foundation models in computational healthcare.
+
+---
+
+## 🗂️ Dataset Platforms
+
+You can search for more medical datasets not included in this project on these websites:
+
+*   [Grand Challenges](https://grand-challenge.org/): A platform for end-to-end development of machine learning solutions in biomedical imaging.
+*   [Kaggle](https://www.kaggle.com/datasets): One of the largest AI & ML community.
+*   [TCIA (The Cancer Imaging Archive)](https://www.cancerimagingarchive.net/): A service which de-identifies and hosts a large archive of medical images of cancer accessible for public download.
+*   [Synapse](https://www.synapse.org/): A platform for supporting scientific collaborations centered around shared biomedical data sets.
+*   [Medical Segmentation Decathlon](http://medicaldecathlon.com/): The MSD challenge tests the generalisability of machine learning algorithms when applied to 10 different semantic segmentation tasks.
+*   [CodaLab Competitions](https://codalab.lisn.upsaclay.fr/): An open-source web-based platform that enables researchers, developers, and data scientists to collaborate, with the goal of advancing research fields where machine learning and advanced computation is used.
+*   [Tianchi (天池)](https://tianchi.aliyun.com/dataset): Tianchi is a developer competition platform under Alibaba Cloud. (Chinese)
+*   [OpenDataLab](https://opendatalab.com/): China Big Model Corpus Data Alliance open source data service designated platform, provides high-quality open data sets for large models. (Chinese)
+
+---
+
+## 📊 Evaluation Benchmarks
+
+*Note: Many of the datasets collected in this project are benchmarks on the data platform. This section collects comprehensive benchmarks specifically used to evaluate model performance.*
+
+| Benchmark     | Organization     | Paper                                      | Website                                 |
+| :------------ | :--------------- | :----------------------------------------- | :-------------------------------------- |
+| MedBench      | Shanghai AI Lab  | [arXiv](<Link to MedBench arXiv Paper>)      | [Project Link](<Link to MedBench Project>) |
+| OmniMedVQA    | Shanghai AI Lab  | [arXiv](<Link to OmniMedVQA arXiv Paper>)  | [GitHub stars](<Link to OmniMedVQA GitHub>) |
+| A-Eval        | Shanghai AI Lab  | [arXiv](<Link to A-Eval arXiv Paper>)      | [GitHub stars](<Link to A-Eval GitHub>)    |
+| GMAI-MMBench  | Shanghai AI Lab  | [arXiv](<Link to GMAI-MMBench arXiv Paper>)| [GitHub stars](<Link to GMAI-MMBench GitHub>) |
+| Touchstone    | JHU              | [arXiv](<Link to Touchstone arXiv Paper>)  | [GitHub stars](<Link to Touchstone GitHub>) |
+
+*(Please replace `<Link to ...>` with the actual URLs.)*
+
+---
+
+## 🏆 SOTA Methods
+
+### Segmentation
+
+| Model             | Organization     | Paper                                    | Github                                  |
+| :---------------- | :--------------- | :--------------------------------------- | :-------------------------------------- |
+| nnU-Net           | DKFZ             | [arXiv](<Link to nnU-Net arXiv Paper>)   | [GitHub stars](<Link to nnU-Net GitHub>) |
+| MedNeXt           | DKFZ             | [arXiv](<Link to MedNeXt arXiv Paper>)   | [GitHub stars](<Link to MedNeXt GitHub>) |
+| STU-Net           | Shanghai AI Lab  | [arXiv](<Link to STU-Net arXiv Paper>)   | [GitHub stars](<Link to STU-Net GitHub>) |
+| U-Net & CLIP      | CityU            | [arXiv](<Link to U-Net & CLIP arXiv Paper>) | [GitHub stars](<Link to U-Net & CLIP GitHub>) |
+| UNETR             | NVIDIA           | [arXiv](<Link to UNETR arXiv Paper>)     | [GitHub stars](<Link to UNETR GitHub>)   |
+| Swin UNETR        | NVIDIA           | [arXiv](<Link to Swin UNETR arXiv Paper>)| [GitHub stars](<Link to Swin UNETR GitHub>)|
+| Swin UNETR & CLIP | CityU            | [arXiv](<Link to Swin UNETR & CLIP arXiv Paper>) | [GitHub stars](<Link to Swin UNETR & CLIP GitHub>) |
+| MedFormer         | Rutgers          | [arXiv](<Link to MedFormer arXiv Paper>) | [GitHub stars](<Link to MedFormer GitHub>)|
+| UniSeg            | NPU              | [arXiv](<Link to UniSeg arXiv Paper>)    | [GitHub stars](<Link to UniSeg GitHub>)  |
+| Diff-UNet         | HKUST            | [arXiv](<Link to Diff-UNet arXiv Paper>) | [GitHub stars](<Link to Diff-UNet GitHub>)|
+| LHU-Net           | UR               | [arXiv](<Link to LHU-Net arXiv Paper>)   | [GitHub stars](<Link to LHU-Net GitHub>) |
+| NexToU            | HIT              | [arXiv](<Link to NexToU arXiv Paper>)    | [GitHub stars](<Link to NexToU GitHub>)  |
+| SegVol            | BAAI             | [arXiv](<Link to SegVol arXiv Paper>)    | [GitHub stars](<Link to SegVol GitHub>)  |
+| UNesT             | NVIDIA           | [arXiv](<Link to UNesT arXiv Paper>)     | [GitHub stars](<Link to UNesT GitHub>)   |
+| SAM-Adapter       | Duke             | [arXiv](<Link to SAM-Adapter arXiv Paper>)| [GitHub stars](<Link to SAM-Adapter GitHub>)|
+
+*(Please replace `<Link to ...>` with the actual URLs. "GitHub stars" might refer to the direct GitHub link or a badge showing stars; adjust as needed.)*
+
+---
+
+## 🛠️ Related Foundation Toolbox Projects
+
+Many of the papers that use the datasets collected in this project have their code written based on the following Github code projects.
+
+| Projects        | Organization    | Paper                                   | Github                                |
+| :-------------- | :-------------- | :-------------------------------------- | :------------------------------------ |
+| nnU-Net         | DKFZ            | [arXiv](<Link to nnU-Net arXiv Paper>)  | [GitHub stars](<Link to nnU-Net GitHub>) |
+| MONAI           | NVIDIA          | [arXiv](<Link to MONAI Paper/Website>)  | [GitHub stars](<Link to MONAI GitHub>)  |
+| SAM             | META            | [arXiv](<Link to SAM Paper>)            | [GitHub stars](<Link to SAM GitHub>)    |
+| MMSegmentation  | Shanghai AI Lab | -                                       | [GitHub stars](<Link to MMSegmentation GitHub>) |
+| MMPretrain      | Shanghai AI Lab | -                                       | [GitHub stars](<Link to MMPretrain GitHub>) |
+
+*(Please replace `<Link to ...>` with the actual URLs. For projects like MONAI or MMSegmentation that might not have a single defining "paper" in the same way as a model, you might link to their main documentation, GitHub, or a general overview paper if available.)*
 
 ---
 
