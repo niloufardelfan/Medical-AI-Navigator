@@ -1,78 +1,210 @@
-# 🩺 Awesome Medical Datasets for Deep Learning and Machine Learning
+# 🧠 Awesome Medical Datasets for Deep Learning & Machine Learning
 
-A comprehensive collection of publicly available medical datasets, organized by organ system, to facilitate research and development in medical imaging and related fields.
-
----
-
-## 🧠 Brain Datasets
-
-| Dataset Name | Task(s) | Modality | Subjects | Labels | Description | Access Link |
-|--------------|---------|----------|----------|--------|-------------|-------------|
-| **BraTS** | Tumor Segmentation | MRI (T1, T1c, T2, FLAIR) | ~750 | Tumor sub-regions (enhancing tumor, tumor core, whole tumor) | Benchmark dataset for brain tumor segmentation. | [Link](https://www.med.upenn.edu/sbia/brats2018/data.html) |
-| **ADNI** | Disease Progression, Classification | MRI, PET, CSF biomarkers | >1,000 | Alzheimer's stages (CN, MCI, AD) | Longitudinal study for Alzheimer's disease research. | [Link](http://adni.loni.usc.edu/) |
-| **Human Connectome Project (HCP)** | Brain Connectivity Mapping | MRI (Structural, Functional) | 1,200 | Brain connectivity metrics | High-resolution imaging for mapping human brain connectivity. | [Link](https://www.humanconnectome.org/) |
-| **MRBrainS** | Brain Tissue Segmentation | MRI (T1, T1 IR, FLAIR) | 20 | Gray Matter, White Matter, CSF | Segmentation of brain tissues in elderly subjects. | [Link](https://mrbrains18.isi.uu.nl/) |
-| **iSeg-2017** | Infant Brain Segmentation | MRI (T1, T2) | 10 | Brain tissues | Segmentation challenge for 6-month-old infant brains. | [Link](http://iseg2017.web.unc.edu/) |
-| **SynthStrip** | Skull-Stripping | MRI, CT, PET | >600 | Brain masks | Dataset for evaluating brain extraction algorithms. | [Link](https://github.com/beamandrew/medical-data) |
-| **MOOD** | Out-of-Distribution Detection | MRI, CT | 800 (Brain), 550 (Abdomen) | Anomaly detection labels | Dataset for evaluating OOD detection methods. | [Link](https://neuro-ml.github.io/amid/latest/datasets-api/) |
+A curated collection of publicly available medical datasets across various modalities and anatomical regions, tailored for researchers and practitioners in deep learning (DL) and machine learning (ML). This repository aims to facilitate the development and benchmarking of algorithms in medical imaging and related fields.
 
 ---
 
-## ❤️ Heart Datasets
-
-| Dataset Name | Task(s) | Modality | Subjects | Labels | Description | Access Link |
-|--------------|---------|----------|----------|--------|-------------|-------------|
-| **MSD Cardiac (Task02)** | Left Atrium Segmentation | MRI | 30 | Left atrium masks | Part of the Medical Segmentation Decathlon. | [Link](https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/MSD_Cardiac.md) |
-| **Automated Cardiac Diagnosis Challenge (ACDC)** | Cardiac Structure Segmentation | MRI | 150 | LV, RV, Myocardium | Segmentation and diagnosis of cardiac structures. | [Link](https://www.creatis.insa-lyon.fr/Challenge/acdc/) |
-| **UK Biobank Cardiac** | Cardiac Imaging Analysis | MRI | 5,000+ | Cardiac measurements | Large-scale dataset for cardiac imaging research. | [Link](https://www.ukbiobank.ac.uk/) |
-| **Sunnybrook Cardiac Data** | LV Segmentation | MRI | 45 | LV contours | Dataset for evaluating LV segmentation algorithms. | [Link](https://www.cardiacatlas.org/studies/sunnybrook-cardiac-data/) |
-
----
-
-## 🫁 Lung Datasets
-
-| Dataset Name | Task(s) | Modality | Subjects | Labels | Description | Access Link |
-|--------------|---------|----------|----------|--------|-------------|-------------|
-| **ChestX-ray8** | Disease Classification, Localization | X-ray | 32,717 | 8 thoracic disease labels | Large-scale chest X-ray dataset with disease labels. | [Link](https://nihcc.app.box.com/v/ChestXray-NIHCC) |
-| **CheXpert** | Disease Classification | X-ray | 65,240 | 14 observations with uncertainty labels | Dataset with uncertainty labels for chest radiographs. | [Link](https://stanfordmlgroup.github.io/competitions/chexpert/) |
-| **MIMIC-CXR-JPG** | Disease Classification | X-ray | 227,827 studies | 14 labels derived from reports | Large chest radiograph dataset with associated reports. | [Link](https://physionet.org/content/mimic-cxr-jpg/2.0.0/) |
-| **PadChest** | Multi-label Classification | X-ray | 67,000 | 174 findings, 19 diagnoses | High-resolution chest X-ray dataset with detailed labels. | [Link](http://bimcv.cipf.es/bimcv-projects/padchest/) |
-| **LIDC-IDRI** | Lung Nodule Detection | CT | 1,018 | Nodule annotations | Dataset for lung nodule detection and classification. | [Link](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI) |
+📚 **Table of Contents**
+*   [Whole Body](#whole-body)
+*   [Brain](#brain)
+*   [Head and Neck](#head-and-neck)
+*   [Chest (Lungs & Thorax)](#chest-lungs--thorax)
+*   [Abdomen](#abdomen)
+*   [Heart](#heart)
+*   [Bones](#bones)
+*   [Endoscopy](#endoscopy)
+*   [Retina](#retina)
+*   [Skin](#skin)
+*   [Microscopic Imaging (Histopathology)](#microscopic-imaging-histopathology)
+*   [Imaging and Text](#imaging-and-text)
+*   [Text](#text)
+*   [Contributing](#contributing)
+*   [License](#license)
 
 ---
 
-## 🧬 Other Organ Datasets
+## 🏃‍♂️ Whole Body
 
-| Dataset Name | Organ | Task(s) | Modality | Subjects | Labels | Description | Access Link |
-|--------------|-------|---------|----------|----------|--------|-------------|-------------|
-| **LiTS** | Liver | Tumor Segmentation | CT | 131 | Liver and tumor masks | Liver tumor segmentation challenge dataset. | [Link](https://competitions.codalab.org/competitions/17094) |
-| **Pancreas-CT** | Pancreas | Segmentation | CT | 82 | Pancreas masks | Dataset for pancreas segmentation tasks. | [Link](https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT) |
-| **TotalSegmentator** | Multiple Organs | Segmentation | CT | 1,204 | 104 anatomical structures | Comprehensive dataset for multi-organ segmentation. | [Link](https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/TotalSegmentator.md) |
-| **Prostate MR Image Segmentation (PROMISE12)** | Prostate | Segmentation | MRI | 50 | Prostate masks | Dataset for prostate segmentation in MRI. | [Link](https://promise12.grand-challenge.org/) |
-| **Retinal Fundus Images (DRIVE)** | Eye | Vessel Segmentation | Fundus Photography | 40 | Vessel annotations | Dataset for blood vessel segmentation in retinal images. | [Link](https://drive.grand-challenge.org/) |
-
----
-
-## 📚 Additional Resources
-
-- **Awesome-Medical-Dataset**: ^[A curated list of medical datasets and resources.]({"attribution":{"attributableIndex":"6463-2"}}) [GitHub](https://github.com/openmedlab/Awesome-Medical-Dataset)
-
-- **Papers With Code - Medical Datasets**: ^[Collection of medical datasets with associated papers and code.]({"attribution":{"attributableIndex":"6644-1"}}) [Link](https://paperswithcode.com/datasets?mod=medical) [oai_citation:1‡Papers with Code](https://paperswithcode.com/datasets?lang=english&mod=medical&o=newest&page=1&q=&v=lst&utm_source=chatgpt.com)
-
-- **V7 Labs - Healthcare Datasets for Computer Vision**: ^[List of open-source healthcare datasets for computer vision.]({"attribution":{"attributableIndex":"6811-1"}}) [Blog](https://www.v7labs.com/blog/healthcare-datasets-for-computer-vision) [oai_citation:2‡V7 Labs](https://www.v7labs.com/blog/healthcare-datasets-for-computer-vision?utm_source=chatgpt.com)
+| Dataset Name        | Task                      | Modality   | # Subjects | Labels/Classes                                       | Description                                                                                                  | Link                                      |
+| :------------------ | :------------------------ | :--------- | :--------- | :--------------------------------------------------- | :----------------------------------------------------------------------------------------------------------- | :---------------------------------------- |
+| CT-ORG              | Organ Segmentation        | CT         | 140        | 6 (lungs, liver, kidneys, spleen, bladder, bones)    | 3D CT scans with annotations for six organ categories.                                                         | [GitHub](https://github.com/MIC-DKFZ/CT-ORG) |
+| AutoPET             | Tumor Segmentation        | PET-CT     | 1,214      | 1 (tumor)                                            | Whole-body tumor segmentation in PET-CT images from FDG-PET/CT scans.                                        | [Grand Challenge](https://autopet.grand-challenge.org/) |
+| TotalSegmentator    | Organ Segmentation        | CT         | 1,204      | 104 (various organs & anatomical structures)       | Comprehensive organ segmentation dataset with 104 classes.                                                     | [GitHub](https://github.com/wasserth/TotalSegmentator) |
+| TotalSegmentator V2 | Organ Segmentation        | CT         | 1,823      | 117 (various organs & anatomical structures)       | Updated version with additional organ classes and more subjects.                                               | [Zenodo](https://zenodo.org/record/81 टोटलSegmentatorV2) |
+| TotalSegmentator MRI| Organ Segmentation        | MRI        | 298        | 56 (various organs & anatomical structures)        | MRI-based organ segmentation dataset.                                                                          | [Zenodo](https://zenodo.org/record/10005224) |
+| ULS                 | Tumor Segmentation        | CT         | 38,842     | 1 (cancer)                                           | Large-scale whole-body tumor segmentation dataset from Universal Lesion Segmentation challenge.                | [Grand Challenge](https://uls.grand-challenge.org/) |
+| AMOS 2022           | Abdominal Organ Segmentation | CT & MRI   | 600        | 15 (spleen, R/L kidney, gallbladder, esophagus, liver, stomach, aorta, IVC, pancreas, R/L adrenal gland, duodenum, bladder, prostate/uterus) | Abdominal Multi-Organ Segmentation challenge, CT and MRI data.                                                | [Grand Challenge](https://amos22.grand-challenge.org/) |
 
 ---
 
-## 🤝 Contributing
+## 🧠 Brain
 
-^[Contributions are welcome! If you know of a dataset that should be included, please open an issue or submit a pull request with the relevant information.]({"attribution":{"attributableIndex":"7009-1"}})
+| Dataset Name          | Task                                     | Modality             | # Subjects | Labels/Classes                                               | Description                                                                                                                            | Link                                                           |
+| :-------------------- | :--------------------------------------- | :------------------- | :--------- | :----------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- |
+| BraTS (2021-2023)     | Brain Tumor Segmentation                 | MRI (T1, T1c, T2, FLAIR) | ~2000+ (varies by year) | 3 (enhancing tumor, tumor core, whole tumor) / 4 (labels per region) | Multimodal Brain Tumor Segmentation Challenge. Data focuses on gliomas. Number of subjects increases with each challenge year.             | [CBICA](https://www.med.upenn.edu/cbica/brats-challenge/)        |
+| ADNI                  | Alzheimer's Disease Classification/Progression | MRI, PET, Clinical | 1500+      | Normal, MCI, AD                                              | Alzheimer's Disease Neuroimaging Initiative. Longitudinal multimodal data including imaging, clinical, and genetic information.        | [ADNI](http://adni.loni.usc.edu/)                               |
+| OASIS                 | Brain Aging, Alzheimer's Disease         | MRI                  | ~400 (OASIS-1), ~150 (OASIS-2), ~1000 (OASIS-3) | Healthy, AD, Cognitive status | Open Access Series of Imaging Studies. Longitudinal neuroimaging, clinical, and cognitive data for normal aging and Alzheimer's Disease. | [OASIS Brains](https://www.oasis-brains.org/)                  |
+| IXI Dataset           | Brain Segmentation, Atlas Building       | MRI (T1, T2, PD, MRA, DWI) | ~600       | N/A (raw data for structure analysis)                        | Information eXtraction from Images. Brain MRI data from healthy adults.                                                                  | [IXI Dataset](https://brain-development.org/ixi-dataset/)     |
+| ATLAS R2.0            | Stroke Lesion Segmentation               | MRI (T1, T2, FLAIR, DWI) | 655        | Stroke lesion                                                | Anatomical Tracings of Lesions After Stroke. Multi-site dataset with manual segmentations.                                             | [ATLAS](http://fcon_1000.projects.nitrc.org/indi/retro/atlas_r2.0.html) |
+| HCP                   | Connectomics, Brain Parcellation         | MRI (dMRI, fMRI, T1, T2) | 1200       | N/A (extensive neuroimaging data)                          | Human Connectome Project. Aims to map human brain connectivity. Provides extensive imaging and behavioral data.                        | [Human Connectome](https://www.humanconnectome.org/study/hcp-young-adult) |
 
 ---
 
-## 📄 License
+## 🤯 Head and Neck
 
-^[This project is licensed under the MIT License.]({"attribution":{"attributableIndex":"7191-1"}})
+| Dataset Name         | Task                                   | Modality | # Subjects | Labels/Classes                           | Description                                                                                      | Link                                                              |
+| :------------------- | :------------------------------------- | :------- | :--------- | :--------------------------------------- | :----------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
+| MICCAI2024-AutoPETIII| Tumor Lesion Segmentation              | PET-CT   | 1,614      | Multiple (tumor lesions)                 | Multi-center, multi-tracer automatic tumor lesion segmentation in head & neck, and whole body PET-CT. | [Grand Challenge](https://autopet3.grand-challenge.org/)        |
+| ImageCAS             | Coronary Artery Segmentation           | CTA      | 1,000      | Coronary arteries                        | Large-scale coronary artery segmentation dataset from Cardiac CTA. (Note: Heart-related but often involves neck vessels). | [GitHub](https://github.com/FunClipQA/ImageCAS)                  |
+| Head-Neck-CT-Atlas   | Organ at Risk Segmentation             | CT       | 25         | 9 (brainstem, mandible, parotids, etc.)  | CT scans of head and neck cancer patients with manual OAR contours.                               | [TCIA](https://wiki.cancerimagingarchive.net/display/Public/Head-Neck-CT-Atlas) |
+| PDDCA                | Oropharyngeal Cancer Outcome Prediction| CT, Clinical| 312      | Recurrence, Distant Metastasis         | Patient data with CT images and clinical info for predicting oropharyngeal cancer outcomes.        | [TCIA](https://wiki.cancerimagingarchive.net/display/Public/PDDCA) |
 
 ---
 
-^[*Note: Always ensure compliance with dataset usage terms and patient privacy regulations when utilizing these datasets.*]({"attribution":{"attributableIndex":"7262-0"}})
+## 🫁 Chest (Lungs & Thorax)
+
+| Dataset Name        | Task                                   | Modality | # Subjects  | Labels/Classes                                               | Description                                                                                                            | Link                                                        |
+| :------------------ | :------------------------------------- | :------- | :---------- | :----------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------- |
+| PadChest            | Multi-label Classification, Report Gen | X-ray    | ~67,000 (patients), ~160,000 (images) | 174 (radiological findings), 19 (differential diagnoses) | Large chest X-ray dataset with multi-label annotations and associated radiological reports.                                | [PhysioNet](https://physionet.org/content/padchest/1.0.0/) or [arXiv](https://arxiv.org/abs/1901.07441) |
+| MedFM ChestDR2023   | Disease Classification                 | X-ray    | 4,848      | 19 (common chest abnormalities)                            | Classification of 19 common chest abnormalities from digital radiography.                                                | [GitHub](https://github.com/FudanMEDPMC/MedFM/tree/main/benchmark/ChestDR2023) |
+| LIDC-IDRI           | Lung Nodule Detection & Segmentation   | CT       | 1,018      | Nodule outlines and characteristics (e.g., malignancy)     | Lung Image Database Consortium image collection. Thoracic CT scans with annotated lesions by multiple radiologists.        | [TCIA](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI) |
+| LUNA16              | Lung Nodule Detection                  | CT       | 888        | Nodule locations (present/absent)                            | LUng Nodule Analysis 2016 challenge dataset, derived from LIDC-IDRI. Focuses on nodule detection.                      | [Grand Challenge](https://luna16.grand-challenge.org/Data/) |
+| ChestX-ray8         | Disease Classification                 | X-ray    | 30,805 (patients), ~112,000 (images) | 8 (Atelectasis, Cardiomegaly, Effusion, Infiltration, Mass, Nodule, Pneumonia, Pneumothorax) | Chest X-ray database from NIH, with 8 common thoracic disease labels mined from radiological reports.                   | [NIH CXR8](https://nihcc.app.box.com/v/ChestXray-NIHCC)   |
+| MIMIC-CXR           | Multi-label Classification, Report Gen | X-ray    | ~227,000 (patients), ~377,000 (images) | 14 (common pathological conditions)                        | Large dataset of chest X-rays with free-text radiology reports and structured labels. Part of the MIMIC-IV project.       | [PhysioNet](https://physionet.org/content/mimic-cxr-jpg/2.0.0/) |
+| COVID-19 Radiography| COVID-19 Classification                | X-ray    | ~21,000    | COVID-19, Viral Pneumonia, Normal                          | A large, diverse dataset of chest X-ray images for COVID-19 detection.                                               | [Kaggle](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database) |
+| RibFrac Challenge   | Rib Fracture Detection & Classification| CT       | 500 cases  | Fractured (yes/no), Displaced, Buckle, Nondisplaced      | Rib Fracture detection, segmentation, and classification challenge dataset.                                            | [Grand Challenge](https://ribfrac.grand-challenge.org/Dataset/) |
+
+---
+
+## 🍽 Abdomen
+
+| Dataset Name     | Task                           | Modality | # Subjects | Labels/Classes                                            | Description                                                                                                             | Link                                                                  |
+| :--------------- | :----------------------------- | :------- | :--------- | :-------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------- |
+| AbdomenCT-1K     | Organ Segmentation             | CT       | 1,112      | Multiple (major abdominal organs)                         | Clinically diverse abdominal CT organ segmentation dataset with over 1000 patients.                                   | [Synapse](https://www.synapse.org/#!Synapse:syn27617043/wiki/617210) or [arXiv](https://arxiv.org/abs/2210.06808) |
+| LiTS             | Liver & Liver Tumor Segmentation| CT       | 201        | Liver, Liver Tumor                                        | Liver Tumor Segmentation Challenge. Focuses on segmentation of liver and liver lesions.                                 | [LiTS Challenge](http://litsc.grand-challenge.org/data/)             |
+| KiTS23           | Kidney & Kidney Tumor Segmentation | CT    | 489        | Kidney, Kidney Tumor, Cyst                                | Kidney and Kidney Tumor Segmentation Challenge for nephrectomy cases.                                                   | [KiTS23 GitHub](https://github.com/neheller/kits23)                     |
+| CHAOS            | Abdominal Organ Segmentation   | CT & MRI | 40 (CT), 40 (MRI) | 4 (liver, R/L kidney, spleen) in MRI, multiple in CT | Combined (CT-MR) Healthy Abdominal Organ Segmentation Challenge. Provides T1-DUAL (In-Phase/Out-of-Phase) and T2-SPIR MR. | [Grand Challenge](https://chaos.grand-challenge.org/Data_Download/)  |
+| MSD Pancreas     | Pancreas & Pancreatic Tumor Seg | CT      | 420        | Pancreas, Pancreatic Tumor                                | Part of the Medical Segmentation Decathlon focusing on pancreas and pancreatic tumor segmentation.                        | [Medical Decathlon](http://medicaldecathlon.com/)                     |
+
+---
+
+## ❤️ Heart
+
+| Dataset Name      | Task                                               | Modality | # Subjects  | Labels/Classes                                      | Description                                                                                                            | Link                                                               |
+| :---------------- | :------------------------------------------------- | :------- | :---------- | :-------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------- |
+| EMIDEC            | Myocardial Infarction Assessment                   | MRI      | 100 (patients), 150 (scans) | Infarct, No-reflow, Normal Myocardium             | Evaluation of Myocardial Infarction from DElayed-enhancement Cardiac MRI. Contains expert segmentations.               | [GitHub](https://github.com/EMIDEC-Challenge/EMIDEC-Dataset)       |
+| ACDC              | Cardiac Segmentation (LV, RV, Myo) & Disease Class. | MRI      | 100-150 (varies per release) | LV, RV, Myocardium at ED & ES; Disease state      | Automated Cardiac Diagnosis Challenge. Cine MRI for left/right ventricle and myocardium segmentation, disease classification. | [ACDC Challenge](https://www.creatis.insa-lyon.fr/Challenge/acdc/databases.html) |
+| M&Ms Challenge    | Multi-Vendor, Multi-Disease Cardiac Segmentation   | MRI      | 375         | LV, RV, Myocardium at ED & ES                     | Multi-Centre, Multi-Vendor & Multi-Disease Cardiac Image Segmentation Challenge. Tests domain generalization.           | [M&Ms Challenge](https://www.ub.edu/mnms/)                         |
+| CAMUS             | Cardiac Ultrasound Segmentation & Quality Assessment | Echo     | 500         | LV Endocardium, LV Epicardium, LA Endocardium at ED & ES | Cardiac M-mode, 2-chamber, and 4-chamber echocardiography sequences with ground truth segmentations and image quality grades. | [CAMUS Dataset](https://www.creatis.insa-lyon.fr/Challenge/camus/) |
+
+---
+
+## 🦴 Bones
+
+| Dataset Name   | Task                                      | Modality | # Subjects (or Images) | Labels/Classes                             | Description                                                                                                         | Link                                                                       |
+| :------------- | :---------------------------------------- | :------- | :--------------------- | :----------------------------------------- | :------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------- |
+| MURA           | Musculoskeletal Abnormality Detection     | X-ray    | ~14,863 (studies), ~40,561 (images) | Normal, Abnormal                           | Musculoskeletal Radiographs dataset of upper extremities (shoulder, humerus, elbow, forearm, wrist, hand).          | [Stanford ML Group](https://stanfordmlgroup.github.io/competitions/mura/)  |
+| RibFrac        | Rib Fracture Detection & Segmentation     | CT       | 500 (cases)            | Rib fracture presence, type, displacement  | Dataset for rib fracture detection, segmentation, and classification from chest CT scans. See also in Chest section.   | [Grand Challenge](https://ribfrac.grand-challenge.org/Dataset/)           |
+| VinDr-BoneMRI  | Knee MRI Abnormality Classification/Localization | MRI   | 1,150 (studies)         | 8 (ACL tear, Meniscal tear, etc.)           | Knee MRI dataset with abnormalities labeled by radiologists, including bounding boxes for lesions.                   | [PhysioNet](https://physionet.org/content/vindr-bonemri/1.0.0/)             |
+| RSNA Bone Age  | Bone Age Assessment                       | X-ray    | ~12,600 (images)       | Bone age (months), Male/Female             | Pediatric hand X-rays for bone age assessment challenge.                                                              | [Kaggle (RSNA Bone Age)](https://www.kaggle.com/c/rsna-bone-age/data)       |
+| VerSe          | Vertebral Segmentation & Labeling         | CT       | 374 (scans)            | Vertebrae labels (C1-L5, etc.) & centroids | Large-scale Vertebral Segmentation Challenge. Multi-site, multi-scanner CT data with vertebral body segmentations.  | [Grand Challenge](https://verse.grand-challenge.org/Data/)               |
+
+---
+
+## 🩺 Endoscopy
+
+| Dataset Name     | Task                                                  | Modality        | # Subjects/Videos/Frames | Labels/Classes                                                | Description                                                                                                   | Link                                                                |
+| :--------------- | :---------------------------------------------------- | :-------------- | :----------------------- | :------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------ |
+| SurgVU24         | Surgical Instrument Identification, Phase Recognition | Endoscopy Video | - (Multiple procedures)  | Surgical instruments, Surgical phases                       | Identification of surgical instruments and phase recognition in surgeries. Video data.                         | [GitHub](https://github.com/SurgVU/SurgVU24Challenge)               |
+| Kvasir-SEG       | Polyp Segmentation                                    | Endoscopy       | 1000 (images)            | Polyp                                                         | Gastrointestinal polyp image dataset with corresponding segmentation masks.                                    | [Kvasir Dataset Page](https://datasets.simula.no/kvasir-seg/)       |
+| Kvasir-Capsule   | Lesion Detection, Anatomical Landmark Recognition     | Capsule Endoscopy | ~44,000 (images)         | Various findings (polyps, bleeding, inflammation), Landmarks | Images from capsule endoscopy, annotated for various findings and anatomical landmarks.                        | [Kvasir Dataset Page](https://datasets.simula.no/kvasir-capsule/)   |
+| HyperKvasir      | Image Classification, Segmentation                    | Endoscopy       | ~110,000 (images & frames from 374 videos) | ~23 classes (pathological findings, anatomical landmarks)   | Large gastrointestinal endoscopy dataset with labeled images and segmented frames for various clinical findings. | [HyperKvasir Page](https://hyperkvasir.simula.no/)                  |
+| EAD2020          | Endoscopic Artefact Detection                         | Endoscopy Video | 22 (sequences)           | 7 artefact classes (blur, saturation, contrast etc.)        | Challenge dataset for detecting various visual artifacts in colonoscopy videos.                                | [Grand Challenge](https://ead2020.grand-challenge.org/EAD2020/)     |
+
+---
+
+## 👁 Retina
+
+| Dataset Name    | Task                                        | Modality    | # Subjects/Images | Labels/Classes                             | Description                                                                                                | Link                                                                   |
+| :-------------- | :------------------------------------------ | :---------- | :---------------- | :----------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------- |
+| LES-AV          | Artery/Vein Segmentation                    | Fundus      | 22 (images)       | Artery, Vein                               | Fundus images with artery and vein annotations from the DRIVE dataset.                                     | [GitHub](https://github.com/ShengWelson/LES-AV-Retinal-Vessel-Segmentation) |
+| DRIVE           | Vessel Segmentation                         | Fundus      | 40 (images)       | Vessel/Non-vessel                          | Digital Retinal Images for Vessel Extraction. Widely used benchmark for retinal vessel segmentation.        | [DRIVE Page](https://drive.grand-challenge.org/Data/)                 |
+| STARE           | Vessel Segmentation, Pathology Detection    | Fundus      | 20 (images)       | Vessel/Non-vessel, Pathologies             | STructured Analysis of the REtina. Fundus images with vessel segmentations and clinical labels.           | [STARE Project](http://www.ces.clemson.edu/~ahoover/stare/)           |
+| Messidor        | Diabetic Retinopathy Grading                | Fundus      | 1200 (images)     | Retinopathy grade (0-3), Risk of macular edema | Fundus images for diabetic retinopathy grading.                                                              | [Messidor Page](https://www.adcis.net/en/third-party/messidor/)     |
+| IDRiD           | DR Grading, Lesion Segmentation             | Fundus      | 516 (images)      | DR grades, Lesions (MA, HE, EX, SE)        | Indian Diabetic Retinopathy Image Dataset. Offers DR grading and segmentation of microaneurysms, hemorrhages, etc. | [IDRiD Challenge](https://idrid.grand-challenge.org/Data/)            |
+| OCTA-500        | OCT Angiography Vessel Segmentation         | OCT-A       | 500 (volumes)     | Superficial, Deep, Choriocapillaris Layers | Optical Coherence Tomography Angiography for retinal vessel segmentation in different layers.               | [OCTA-500](http://www.medimaging閁net/octa-500/)                   |
+
+---
+
+## 🧴 Skin
+
+| Dataset Name | Task                                      | Modality              | # Subjects/Images | Labels/Classes                                         | Description                                                                                                                  | Link                                                                            |
+| :----------- | :---------------------------------------- | :-------------------- | :---------------- | :----------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------ |
+| ISIC Archive | Skin Lesion Analysis (Segment., Classif.) | Dermoscopy, Clinical  | 100,000+ (images, varies by challenge year) | Melanoma, Nevus, BCC, AKIEC, BKL, DF, VASC, SCC | International Skin Imaging Collaboration. Large archive of skin lesion images for melanoma detection and other tasks. Hosts annual challenges. | [ISIC Archive](https://www.isic-archive.com/#!/topWithHeader/tightContentTop) |
+| HAM10000     | Skin Lesion Classification                | Dermoscopy, Histology | ~7,500 (patients), ~10,000 (images) | 7 (AKIEC, BCC, BKL, DF, MEL, NV, VASC)             | "Human Against Machine with 10000 training images." Multi-class skin lesion classification dataset.                          | [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) |
+| Derm7pt      | Skin Lesion Classification                | Dermoscopy, Clinical  | ~2,000 (images)   | Melanoma, Nevus, Seborrheic Keratosis; 7-point checklist features | Dataset containing dermoscopic images and clinical images with 7-point checklist information.                               | [Derm7pt Info](https://derm.cs.sfu.ca/Welcome.html)                             |
+| PAD-UFES-20  | Skin Disease Classification               | Clinical Images       | ~2,298 (images)   | 6 (Acne, Eczema, Psoriasis, etc.), 20 anatomical sites | Mobile phone acquired images of skin diseases, covering 20 different anatomical sites and 6 disease classes.                  | [IEEE DataPort](https://ieee-dataport.org/open-access/pad-ufes-20-skin-lesion-classification) |
+
+---
+
+## 🔬 Microscopic Imaging (Histopathology)
+
+| Dataset Name      | Task                                         | Modality            | # Subjects/Images/Patches | Labels/Classes                                  | Description                                                                                                 | Link                                                                      |
+| :---------------- | :------------------------------------------- | :------------------ | :------------------------ | :---------------------------------------------- | :---------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| CoNIC2022         | Nuclei Instance Segmentation & Classification| Histology (H&E)     | 4,981 (patches)           | 6 nuclei types (Neutrophil, Epithelial, etc.) | Colon Nuclei Identification and Counting Challenge. Focuses on segmentation and classification of nuclei in H&E stained colorectal adenocarcinoma images. | [CoNIC GitHub](https://conic-challenge.github.io/2022/)                 |
+| PathMMU           | Multimodal Understanding                     | Pathology (WSI, Text) | - (Benchmark)             | Multiple (Pathology QA, Report Gen)           | Benchmark dataset for evaluating multimodal models in pathology, often linking WSI to text-based questions or reports. | [GitHub](https://github.com/PathMMU/PathMMU)                              |
+| Camelyon16 / 17   | Lymph Node Metastasis Detection              | Histology (WSI)     | ~400 (Cam16), ~1000 (Cam17) WSI | Metastasis, Normal                            | Grand Challenge for breast cancer metastasis detection in whole-slide images of lymph nodes. Camelyon17 added patient-level survival prediction. | [Camelyon16](https://camelyon16.grand-challenge.org/Data/) / [Camelyon17](https://camelyon17.grand-challenge.org/Data/) |
+| TUPAC16           | Tumor Proliferation Assessment               | Histology (WSI)     | 500 (training), 321 (test) images | Mitotic figures, Tumor cellularity scores       | TUmor Proliferation Assessment Challenge. Grading breast cancer histopathology based on mitotic count and cellularity. | [TUPAC16](http://tupac.tue-image.nl/node/3)                               |
+| GlaS@MICCAI2015   | Gland Segmentation in Colon Histology        | Histology (H&E)     | 165 (images)              | Gland                                           | Gland Segmentation in Colon Histology Images Challenge. Focuses on benign and malignant glands.              | [GlaS Challenge](https://warwick.ac.uk/fac/sci/dcs/research/tia/glascontest/download/) |
+| BCSS              | Breast Cancer Semantic Segmentation          | Histology (H&E)     | 151 (ROIs from WSIs)      | 6 (Tumor, Stroma, Inflammatory, etc.)           | Breast Cancer Semantic Segmentation dataset with pixel-level annotations for various tissue types.          | [BCSS TCIA](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=52756444) |
+
+---
+
+## 🖼️📝 Imaging and Text
+
+| Dataset Name      | Task                                            | Modality                      | # Subjects/Studies | Labels/Classes                              | Description                                                                                                            | Link                                                               |
+| :---------------- | :---------------------------------------------- | :---------------------------- | :----------------- | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------- |
+| MedFMC            | Disease Classification, Foundation Model Eval   | Multiple (X-Ray, CT, MRI, etc.) | 22,349             | 5 (disease states for benchmark task)       | A large-scale Multi-center, Multi-modal, Multi-task dataset for foundation model evaluation in medicine.             | [GitHub](https://github.com/FudanMEDPMC/MedFMC)                      |
+| ROCO              | Radiology Objects in COntext                    | Radiology Images, Captions    | ~81,000 (images)   | N/A (Image-caption pairs)                   | Dataset of radiology images with corresponding captions. Useful for image captioning, VQA.                             | [ROCO Dataset](https://github.com/flaviagiamber/ROCO)               |
+| MedVQA            | Medical Visual Question Answering               | Radiology Images, QA Pairs    | ~15,000 (VQA pairs) | N/A (Question-Answer pairs based on images) | Collection of medical images (X-rays, CTs) with clinically relevant questions and answers.                             | [MedVQA (SLAKE)](https://www.med-vqa.com/slake/)                  |
+| MIMIC-CXR-Report  | Report Generation / Summarization               | X-ray, Text Reports           | ~227,000 (studies) | N/A (Image-Report pairs)                    | Chest X-rays linked to free-text radiology reports. Part of MIMIC-CXR. (Also see Chest section).                     | [PhysioNet](https://physionet.org/content/mimic-cxr-jpg/2.0.0/)      |
+| RadQA             | Question Answering on Radiology Reports         | Text Reports                  | ~300,000           | Answers to clinical questions               | Question answering dataset based on a large corpus of radiology reports, focusing on clinical information extraction. | [Stanford AIMI](https://stanfordaimi.azurewebsites.net/datasets/ rubrique_10) |
+| OpenI             | Image-Text Retrieval, Report Generation       | Chest X-ray, Text Reports     | ~3,900 (patients), ~7,400 (images) | N/A (Image-Report pairs)                  | Open-access database of de-identified chest X-rays with associated reports from Indiana University Health.           | [OpenI](https://openi.nlm.nih.gov/gridquery)                         |
+
+---
+
+## 📄 Text
+
+| Dataset Name    | Task                                       | Modality | # Records/Questions | Labels/Classes                       | Description                                                                                             | Link                                                                   |
+| :-------------- | :----------------------------------------- | :------- | :------------------ | :----------------------------------- | :------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------- |
+| MedQA           | Medical Question Answering                 | Text     | ~12,700 (USMLE style Qs) | Multiple-choice options (Correct answer) | Medical question and answer dataset in multiple-choice format, often from USMLE-style questions.          | [GitHub (MedQA)](https://github.com/biusante/medqa) or [Original GitHub](https://github.com/jind11/MedQA) |
+| PubMedQA        | Biomedical Question Answering              | Text     | ~211k (pairs)       | Yes/No/Maybe                         | Question answering dataset where answers are derived from abstracts in PubMed.                           | [PubMedQA](https://pubmedqa.github.io/)                                 |
+| MedNLI          | Natural Language Inference                 | Text     | ~14,000 (pairs)     | Entailment, Contradiction, Neutral   | A dataset for Natural Language Inference based on clinical notes from MIMIC-III.                          | [PhysioNet](https://physionet.org/content/mednli/1.0.0/)                 |
+| emrQA           | Question Answering on EHR Notes            | Text     | ~400k (QA pairs)    | Answers from EHR text                | Question answering dataset focused on querying de-identified electronic health record notes.             | [emrQA GitHub](https://github.com/panushri/emrQA)                      |
+| NCBI Disease    | Disease Name Recognition & Normalization   | Text     | 793 (abstracts)     | Disease mentions, Concept IDs        | Corpus of PubMed abstracts annotated for disease names and normalized to MeSH vocabulary.                   | [NCBI Disease Corpus](https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE/) |
+| ClinicalTrials.gov| Various NLP tasks (summarization, IE)      | Text     | Millions (studies)  | Various fields per study             | Database of clinical studies. Can be used for information extraction, summarization, cohort selection.    | [ClinicalTrials.gov](https://clinicaltrials.gov/api/)                 |
+
+---
+
+🤝 **Contributing**
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue to add new datasets, correct information, or improve existing entries. Ensure that any dataset added is publicly available and provide all relevant details as per the existing table structure.
+
+When contributing, please try to provide:
+*   **Dataset Name:** Official or widely recognized name.
+*   **Task:** The primary ML/DL task(s) the dataset is used for (e.g., Segmentation, Classification, Detection, Generation, VQA).
+*   **Modality:** The type of medical data (e.g., CT, MRI, X-ray, Histology, Text, Endoscopy).
+*   **# Subjects (or Images/Scans/Patches):** Approximate number of unique subjects or data points. Specify if it's images, scans, etc.
+*   **Labels/Classes:** Key labels or classes annotated/predicted (e.g., specific organs, disease types, findings).
+*   **Description:** A brief overview of the dataset, its origin, and its purpose.
+*   **Link:** A direct link to the dataset download page, official website, or primary publication.
+
+---
+
+📄 **License**
+
+This repository and its contents are licensed under the [MIT License](LICENSE). Please ensure you comply with the individual licenses of each dataset listed, as they may vary.
+
+---
+
+*Note: The number of subjects, images, and labels/classes are based on available information at the time of listing and may vary depending on dataset versions or specific subsets used. For detailed dataset descriptions, terms of use, and access, please refer to the provided links.*
